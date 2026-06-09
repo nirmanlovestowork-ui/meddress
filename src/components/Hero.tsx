@@ -1,3 +1,5 @@
+import MeddressBox from '../images/meddress_box.jpeg';
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50/50 to-cyan-50/50 pt-16 pb-32">
@@ -25,12 +27,8 @@ export default function Hero() {
         
         {/* Product Image Placeholder */}
         <div className="relative mt-12 max-w-3xl mx-auto">
-          <div className="aspect-[16/9] bg-white rounded-2xl shadow-xl border border-slate-100 flex items-center justify-center p-8 relative overflow-hidden">
-             {/* Butterfly decoration */}
-             <div className="absolute top-4 right-10 text-[rgb(123,55,200)] opacity-80">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M11.96 14.94A4.32 4.32 0 0 1 12 15a4.34 4.34 0 0 1-4.34 4.34 4.34 4.34 0 0 1-4.34-4.34c0-2.2 1.63-4.04 3.75-4.32L4 8l1.58-.8 3.51 3.5a4.34 4.34 0 0 1 2.87-1.08c1.1 0 2.11.4 2.88 1.08l3.5-3.5L20 8l-3.07 2.68c2.12.28 3.75 2.12 3.75 4.32A4.34 4.34 0 0 1 16.34 19.34 4.34 4.34 0 0 1 12 15a4.32 4.32 0 0 1-.04-.06z"/></svg>
-             </div>
-             <img src="https://placehold.co/1280x720/ffffff/00b2ce?text=Meddress+Product+Box+%26+Dressing" alt="Meddress Product" className="object-cover w-full h-full mix-blend-multiply opacity-90" />
+          <div className="aspect-[16/9] bg-white rounded-2xl shadow-xl border border-slate-100 flex items-center justify-center relative overflow-hidden">
+             <img src={MeddressBox} alt="Meddress Product" className="object-cover w-full h-full absolute inset-0" />
           </div>
         </div>
       </div>

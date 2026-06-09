@@ -1,6 +1,6 @@
 import TopNav from './components/TopNav';
 import Hero from './components/Hero';
-import Features from './components/Features';
+// import Features from './components/Features';
 import Specs from './components/Specs';
 import Products from './components/Products';
 import AboutMeddress from './components/AboutMeddress';
@@ -29,7 +29,7 @@ export default function App() {
         ) : (
           <>
             <Hero />
-            <Features />
+            {/* <Features /> */}
             <Specs />
             <AboutMeddress />
             <Products />
