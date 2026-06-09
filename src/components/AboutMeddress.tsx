@@ -1,4 +1,5 @@
 import { Download } from 'lucide-react';
+import DownloadProductListPDF from '../images/download_product_list.pdf';
 
 export default function AboutMeddress() {
   return (
@@ -9,10 +10,10 @@ export default function AboutMeddress() {
           <div className="w-20 h-1.5 bg-[#14aebc] mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-slate-600 mb-8">Global standards. Direct manufacturing. Uncompromising clinical quality.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-[#14aebc] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#0f8a96] transition-colors shadow-md shadow-cyan-200 flex items-center gap-2">
+            <a href={DownloadProductListPDF} download="Meddress_Product_List.pdf" className="bg-[#14aebc] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#0f8a96] transition-colors shadow-md shadow-cyan-200 flex items-center gap-2">
               <Download className="w-5 h-5" />
               Download Product List
-            </button>
+            </a>
             <button className="bg-white text-[#14aebc] px-8 py-3 rounded-full font-semibold border-2 border-cyan-100 hover:bg-cyan-50 transition-colors shadow-sm flex items-center gap-2">
               <Download className="w-5 h-5" />
               Download Brochure
