@@ -1,0 +1,6 @@
+{
+  "name": "MaxioCel Landing Page",
+  "description": "A fully functional clone of the MaxioCel wound dressing landing page.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
