@@ -18,6 +18,14 @@ const productDataListing: Record<string, ProductVariant[]> = {
     { size: '10 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
     { size: '7.50 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
     { size: '5 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '15 Cm x 5 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '10 Cm x 5 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '7.50 Cm x 5 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '5 Cm x 5 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '15 Cm x 6 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '10 Cm x 6 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '7.50 Cm x 6 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '5 Cm x 6 mtr', spec: '35 TPI', pack: '10 Pcs' },
   ],
   'Gauze Than': [
     { size: '60Cm x 16 Mtr', spec: '35 TPI', pack: '1 Pc' }
@@ -34,8 +42,8 @@ const productDataListing: Record<string, ProductVariant[]> = {
     { size: '12 Ply 7.5 x 7.5', spec: '36 TPI', pack: '50 Pcs' },
   ],
   'Gamjee Roll': [
-    { size: '10 Cm', spec: '-', pack: '1 Pc' },
-    { size: '15 Cm', spec: '-', pack: '1 Pc' },
+    { size: '10 Cm', spec: '60 g', pack: '1 Pc' },
+    { size: '15 Cm', spec: '90 g', pack: '1 Pc' },
   ],
   'Combined Dressing': [
     { size: '10 x 10 x 5D', spec: '-', pack: '5 Pcs' },
@@ -43,17 +51,16 @@ const productDataListing: Record<string, ProductVariant[]> = {
   ],
   'Absorbent Cotton': [
     { size: '500 Gms', spec: 'Net wt', pack: '1 Pc' },
-    { size: '500 Gms', spec: '400 Gms', pack: '1 Pc' },
+    { size: '500 Gms (Gross)', spec: 'Gross', pack: '1 Pc' },
     { size: '400 Gms', spec: 'Net wt', pack: '1 Pc' },
-    { size: '400 Gms', spec: '300 Gms', pack: '1 Pc' },
+    { size: '400 Gms (Gross)', spec: 'Gross', pack: '1 Pc' },
     { size: '300 Gms', spec: 'Net wt', pack: '1 Pc' },
     { size: '200 Gms', spec: 'Net wt', pack: '1 Pc' },
     { size: '100 Gms', spec: 'Net wt', pack: '4 Pcs' },
-    { size: '50 Gms', spec: 'Net wt', pack: '5 Pcs' },
+    { size: '50 Gms', spec: 'Net wt', pack: '6 Pcs' },
     { size: '30 Gms', spec: 'Net wt', pack: '12 Pcs' },
     { size: '20 Gms', spec: 'Net wt', pack: '16 Pcs' },
     { size: '15 Gms', spec: 'Net wt', pack: '20 Pcs' },
-    { size: '500 Gms', spec: 'Premium', pack: '1 Pc' },
   ],
   'Zigzag Cotton': [
     { size: '500 Gms', spec: 'Net wt', pack: '1 Pc' },
@@ -65,40 +72,40 @@ const productDataListing: Record<string, ProductVariant[]> = {
     { size: '500 Gms', spec: 'Net wt', pack: '1 Pc' },
   ],
   'Microporous Tape': [
-    { size: '1.25 Cm x 5 mtr', spec: '-', pack: '24 Pcs' },
-    { size: '5.00 Cm x 5 mtr', spec: '-', pack: '6 Pcs' },
-    { size: '2.50 Cm x 5 mtr', spec: '-', pack: '12 Pcs' },
-    { size: '1.25 Cm x 9.1 mtr', spec: '-', pack: '24 Pcs' },
-    { size: '5.00 Cm x 9.1 mtr', spec: '-', pack: '6 Pcs' },
-    { size: '2.50 Cm x 9.1 mtr', spec: '-', pack: '12 Pcs' },
+    { size: '1.25 Cm x 5 mtr', spec: '1/2 Inch', pack: '24 Pcs' },
+    { size: '5.00 Cm x 5 mtr', spec: '2 Inch', pack: '6 Pcs' },
+    { size: '2.50 Cm x 5 mtr', spec: '1 Inch', pack: '12 Pcs' },
+    { size: '1.25 Cm x 9.1 mtr', spec: '1/2 Inch', pack: '24 Pcs' },
+    { size: '5.00 Cm x 9.1 mtr', spec: '2 Inch', pack: '6 Pcs' },
+    { size: '2.50 Cm x 9.1 mtr', spec: '1 Inch', pack: '12 Pcs' },
   ],
   'POP Bandage': [
-    { size: '10 Cm x 2.7 mtr', spec: '-', pack: '12 Pcs' },
-    { size: '15 Cm x 2.7 mtr', spec: '-', pack: '12 Pcs' },
+    { size: '10 Cm x 2.7 mtr', spec: '4 Inch', pack: '12 Pcs' },
+    { size: '15 Cm x 2.7 mtr', spec: '6 Inch', pack: '12 Pcs' },
   ],
   'I.V.Cannula Fixator': [
     { size: '100 Pcs', spec: '-', pack: '100 Pcs' },
   ],
   'Cast Pad / Soft Roll Cotton': [
-    { size: '10 Cm x 3 mtr', spec: '-', pack: '1 Pc' },
-    { size: '15 Cm x 3 mtr', spec: '-', pack: '1 Pc' },
+    { size: '10 Cm x 3 mtr', spec: '4 Inch', pack: '1 Pc' },
+    { size: '15 Cm x 3 mtr', spec: '6 Inch', pack: '1 Pc' },
   ],
   'K99EL Masks': [
-    { size: 'K99EL White Respirator Mask CE', spec: '-', pack: '50 Pcs' },
-    { size: 'K99EL White Respirator Mask CE(Single Pack)', spec: '-', pack: '50 Pcs' },
+    { size: 'K99EL White Respirator Mask CE', spec: 'FFPE2', pack: '50 Pcs' },
+    { size: 'K99EL White Respirator Mask CE(Single Pack)', spec: 'FFPE2', pack: '50 Pcs' },
   ],
   '2 / 3 Ply Masks': [
-    { size: '2 Ply Mask Blue', spec: '-', pack: '100 Pcs' },
-    { size: '3 Ply Mask Blue with MB', spec: '-', pack: '100 Pcs' },
+    { size: '2 Ply Mask Blue', spec: '2 Layer', pack: '100 Pcs' },
+    { size: '3 Ply Mask Blue with MB', spec: '3 Layer with Melt Blown', pack: '100 Pcs' },
   ],
   'Bouffant Cap / Surgeon\'s Cap': [
     { size: 'Bouffant Cap 21" Blue', spec: '-', pack: '100 Pcs' },
     { size: 'Surgeon Cap Blue', spec: '-', pack: '100 Pcs' },
   ],
   'MOP': [
-    { size: '8 Ply 25 x 25', spec: '42 TPI', pack: '10 Pcs' },
-    { size: '4 Ply 30 x 30', spec: '42 TPI', pack: '10 Pcs' },
-    { size: '12 Ply 25 x 25', spec: '42 TPI', pack: '10 Pcs' },
+    { size: '8 Ply 25 x 25', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '4 Ply 30 x 30', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '12 Ply 25 x 25', spec: '35 TPI', pack: '10 Pcs' },
   ]
 };
 
