@@ -34,7 +34,7 @@ const productImages: Record<string, string> = {
   'Cast Pad / Soft Roll Cotton': Cast_Pad,
   'K99EL Masks': K99EL_Masks,
   '2 / 3 Ply Masks': Surgical_Masks,
-  'Surgical Caps': Surgical_Caps,
+  'Bouffant Cap / Surgeon\'s Cap': Surgical_Caps,
   'MOP': MOP
 };
 
@@ -62,7 +62,7 @@ export default function Products() {
     { name: 'Cast Pad / Soft Roll Cotton', type: 'Padding', desc: 'Product description placeholder for additional details.' },
     { name: 'K99EL Masks', type: 'PPE', desc: 'Product description placeholder for additional details.' },
     { name: '2 / 3 Ply Masks', type: 'PPE', desc: 'Product description placeholder for additional details.' },
-    { name: 'Surgical Caps', type: 'PPE', desc: 'Product description placeholder for additional details.' },
+    { name: 'Bouffant Cap / Surgeon\'s Cap', type: 'PPE', desc: 'Product description placeholder for additional details.' },
     { name: 'MOP', type: 'Consumable', desc: 'Product description placeholder for additional details.' }
   ];
 

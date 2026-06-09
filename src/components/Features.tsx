@@ -33,7 +33,7 @@ const productImages: Record<string, string> = {
   'Cast Pad / Soft Roll Cotton': Cast_Pad,
   'K99EL Masks': K99EL_Masks,
   '2 / 3 Ply Masks': Surgical_Masks,
-  'Surgical Caps': Surgical_Caps,
+  'Bouffant Cap / Surgeon\'s Cap': Surgical_Caps,
   'MOP': MOP
 };
 
@@ -53,7 +53,7 @@ export default function Features() {
     { name: 'Cast Pad / Soft Roll Cotton' },
     { name: 'K99EL Masks' },
     { name: '2 / 3 Ply Masks' },
-    { name: 'Surgical Caps' },
+    { name: 'Bouffant Cap / Surgeon\'s Cap' },
     { name: 'MOP' }
   ];
 
