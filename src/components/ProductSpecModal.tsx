@@ -10,87 +10,96 @@ interface ProductSpecModalProps {
   } | null;
 }
 
-const productDataListing: Record<string, { sizes: string, specs: string, pack: string }> = {
-  'Roller Bandage': {
-    sizes: '15 Cm x 3 mtr, 10 Cm x 3 mtr, 7.50 Cm x 3 mtr, 5 Cm x 3 mtr',
-    specs: '35 TPI',
-    pack: '10 Pcs'
-  },
-  'Gauze Than': {
-    sizes: '60 Cm x 16 Mtr',
-    specs: '35 TPI',
-    pack: '1 Pc'
-  },
-  'Gauze Swab': {
-    sizes: '8 Ply & 12 Ply (10 x 10, 7.5 x 7.5, 5 x 5)',
-    specs: '36 TPI',
-    pack: '50 Pcs, 100 Pcs'
-  },
-  'Gamjee Roll': {
-    sizes: '10 Cm, 15 Cm',
-    specs: 'N/A',
-    pack: '1 Pc'
-  },
-  'Combined Dressing': {
-    sizes: '10 x 10 x 5D, 10 x 10 x 10D',
-    specs: 'N/A',
-    pack: '5 Pcs, 10 Pcs'
-  },
-  'Absorbent Cotton': {
-    sizes: '500 Gms, 400 Gms, 300 Gms, 200 Gms, 100 Gms, 50 Gms, 30 Gms, 20 Gms, 15 Gms',
-    specs: 'Net wt, Premium',
-    pack: '1 Pc, 4 Pcs, 5 Pcs, 12 Pcs, 16 Pcs, 20 Pcs'
-  },
-  'Zigzag Cotton': {
-    sizes: '500 Gms, 400 Gms, 200 Gms, 100 Gms',
-    specs: 'Net wt',
-    pack: '1 Pc'
-  },
-  'Non - Absorbent Cotton': {
-    sizes: '500 Gms',
-    specs: 'Net wt',
-    pack: '1 Pc'
-  },
-  'Microporous Tape': {
-    sizes: '1.25 Cm x 5 mtr, 2.50 Cm x 5 mtr, 5.00 Cm x 5 mtr, 1.25 Cm x 9.1 mtr, 2.50 Cm x 9.1 mtr, 5.00 Cm x 9.1 mtr',
-    specs: 'N/A',
-    pack: '6 Pcs, 12 Pcs, 24 Pcs'
-  },
-  'POP Bandage': {
-    sizes: '10 Cm x 2.7 mtr, 15 Cm x 2.7 mtr',
-    specs: 'N/A',
-    pack: '12 Pcs'
-  },
-  'I.V.Cannula Fixator': {
-    sizes: '100 Pcs',
-    specs: 'N/A',
-    pack: '100 Pcs'
-  },
-  'Cast Pad / Soft Roll Cotton': {
-    sizes: '10 Cm x 3 mtr, 15 Cm x 3 mtr',
-    specs: 'N/A',
-    pack: '1 Pc'
-  },
-  'K99EL Masks': {
-    sizes: 'N/A',
-    specs: 'K99EL White Respirator Mask CE',
-    pack: '50 Pcs'
-  },
-  '2 / 3 Ply Masks': {
-    sizes: 'N/A',
-    specs: '2 Ply Mask Blue, 3 Ply Mask Blue with MB',
-    pack: '100 Pcs'
-  },
-  'Bouffant Cap / Surgeon\'s Cap': {
-    sizes: '21" Blue',
-    specs: 'Bouffant Cap, Surgeon Cap',
-    pack: '100 Pcs'
-  },
-  'MOP': {
-    sizes: '8 Ply 25 x 25, 4 Ply 30 x 30, 12 Ply 25 x 25',
-    specs: '42 TPI',
-    pack: '10 Pcs'
-  }
+type ProductVariant = { size: string; spec: string; pack: string };
+
+const productDataListing: Record<string, ProductVariant[]> = {
+  'Roller Bandage': [
+    { size: '15 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '10 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '7.50 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
+    { size: '5 Cm x 3 mtr', spec: '35 TPI', pack: '10 Pcs' },
+  ],
+  'Gauze Than': [
+    { size: '60Cm x 16 Mtr', spec: '35 TPI', pack: '1 Pc' }
+  ],
+  'Gauze Swab': [
+    { size: '8 Ply 10 x 10', spec: '36 TPI', pack: '100 Pcs' },
+    { size: '8 Ply 7.5 x 7.5', spec: '36 TPI', pack: '100 Pcs' },
+    { size: '8 Ply 5 x 5', spec: '36 TPI', pack: '100 Pcs' },
+    { size: '12 Ply 10 x 10', spec: '36 TPI', pack: '100 Pcs' },
+    { size: '12 Ply 10 x 10', spec: '36 TPI', pack: '50 Pcs' },
+    { size: '12 Ply 7.5 x 7.5', spec: '36 TPI', pack: '100 Pcs' },
+    { size: '12 Ply 5 x 5', spec: '36 TPI', pack: '100 Pcs' },
+    { size: '12 Ply 5 x 5', spec: '36 TPI', pack: '50 Pcs' },
+    { size: '12 Ply 7.5 x 7.5', spec: '36 TPI', pack: '50 Pcs' },
+  ],
+  'Gamjee Roll': [
+    { size: '10 Cm', spec: '-', pack: '1 Pc' },
+    { size: '15 Cm', spec: '-', pack: '1 Pc' },
+  ],
+  'Combined Dressing': [
+    { size: '10 x 10 x 5D', spec: '-', pack: '5 Pcs' },
+    { size: '10 x 10 x 10D', spec: '-', pack: '10 Pcs' },
+  ],
+  'Absorbent Cotton': [
+    { size: '500 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '500 Gms', spec: '400 Gms', pack: '1 Pc' },
+    { size: '400 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '400 Gms', spec: '300 Gms', pack: '1 Pc' },
+    { size: '300 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '200 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '100 Gms', spec: 'Net wt', pack: '4 Pcs' },
+    { size: '50 Gms', spec: 'Net wt', pack: '5 Pcs' },
+    { size: '30 Gms', spec: 'Net wt', pack: '12 Pcs' },
+    { size: '20 Gms', spec: 'Net wt', pack: '16 Pcs' },
+    { size: '15 Gms', spec: 'Net wt', pack: '20 Pcs' },
+    { size: '500 Gms', spec: 'Premium', pack: '1 Pc' },
+  ],
+  'Zigzag Cotton': [
+    { size: '500 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '400 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '200 Gms', spec: 'Net wt', pack: '1 Pc' },
+    { size: '100 Gms', spec: 'Net wt', pack: '1 Pc' },
+  ],
+  'Non - Absorbent Cotton': [
+    { size: '500 Gms', spec: 'Net wt', pack: '1 Pc' },
+  ],
+  'Microporous Tape': [
+    { size: '1.25 Cm x 5 mtr', spec: '-', pack: '24 Pcs' },
+    { size: '5.00 Cm x 5 mtr', spec: '-', pack: '6 Pcs' },
+    { size: '2.50 Cm x 5 mtr', spec: '-', pack: '12 Pcs' },
+    { size: '1.25 Cm x 9.1 mtr', spec: '-', pack: '24 Pcs' },
+    { size: '5.00 Cm x 9.1 mtr', spec: '-', pack: '6 Pcs' },
+    { size: '2.50 Cm x 9.1 mtr', spec: '-', pack: '12 Pcs' },
+  ],
+  'POP Bandage': [
+    { size: '10 Cm x 2.7 mtr', spec: '-', pack: '12 Pcs' },
+    { size: '15 Cm x 2.7 mtr', spec: '-', pack: '12 Pcs' },
+  ],
+  'I.V.Cannula Fixator': [
+    { size: '100 Pcs', spec: '-', pack: '100 Pcs' },
+  ],
+  'Cast Pad / Soft Roll Cotton': [
+    { size: '10 Cm x 3 mtr', spec: '-', pack: '1 Pc' },
+    { size: '15 Cm x 3 mtr', spec: '-', pack: '1 Pc' },
+  ],
+  'K99EL Masks': [
+    { size: 'K99EL White Respirator Mask CE', spec: '-', pack: '50 Pcs' },
+    { size: 'K99EL White Respirator Mask CE(Single Pack)', spec: '-', pack: '50 Pcs' },
+  ],
+  '2 / 3 Ply Masks': [
+    { size: '2 Ply Mask Blue', spec: '-', pack: '100 Pcs' },
+    { size: '3 Ply Mask Blue with MB', spec: '-', pack: '100 Pcs' },
+  ],
+  'Bouffant Cap / Surgeon\'s Cap': [
+    { size: 'Bouffant Cap 21" Blue', spec: '-', pack: '100 Pcs' },
+    { size: 'Surgeon Cap Blue', spec: '-', pack: '100 Pcs' },
+  ],
+  'MOP': [
+    { size: '8 Ply 25 x 25', spec: '42 TPI', pack: '10 Pcs' },
+    { size: '4 Ply 30 x 30', spec: '42 TPI', pack: '10 Pcs' },
+    { size: '12 Ply 25 x 25', spec: '42 TPI', pack: '10 Pcs' },
+  ]
 };
 
 export default function ProductSpecModal({ isOpen, onClose, product }: ProductSpecModalProps) {
@@ -109,7 +118,7 @@ export default function ProductSpecModal({ isOpen, onClose, product }: ProductSp
 
   const currentProductData = product && productDataListing[product.name] 
     ? productDataListing[product.name] 
-    : { sizes: 'N/A', specs: 'N/A', pack: 'N/A' };
+    : [];
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 shadow-2xl transition-opacity animate-in fade-in duration-300">
@@ -144,21 +153,29 @@ export default function ProductSpecModal({ isOpen, onClose, product }: ProductSp
 
           {/* Content Section */}
           <div className="px-6 md:px-8 pb-8">
-            <div className="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-              <div className="flex flex-col sm:flex-row border-b border-slate-200 last:border-0 hover:bg-slate-50 transition-colors">
-                <div className="w-full sm:w-1/3 bg-slate-100/80 py-4 px-5 flex items-center border-b sm:border-b-0 sm:border-r border-slate-200 text-xs uppercase tracking-widest font-bold text-slate-600">Available Sizes</div>
-                <div className="w-full sm:w-2/3 bg-white hover:bg-slate-50 py-4 px-5 flex items-center text-[15px] font-medium text-slate-800 leading-relaxed">{currentProductData.sizes}</div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row border-b border-slate-200 last:border-0 hover:bg-slate-50 transition-colors">
-                <div className="w-full sm:w-1/3 bg-slate-100/80 py-4 px-5 flex items-center border-b sm:border-b-0 sm:border-r border-slate-200 text-xs uppercase tracking-widest font-bold text-slate-600">Specifications</div>
-                <div className="w-full sm:w-2/3 bg-white hover:bg-slate-50 py-4 px-5 flex items-center text-[15px] font-medium text-slate-800 leading-relaxed">{currentProductData.specs}</div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row border-b border-slate-200 last:border-0 hover:bg-slate-50 transition-colors">
-                <div className="w-full sm:w-1/3 bg-slate-100/80 py-4 px-5 flex items-center border-b sm:border-b-0 sm:border-r border-slate-200 text-xs uppercase tracking-widest font-bold text-slate-600">Pieces Per Pack</div>
-                <div className="w-full sm:w-2/3 bg-white hover:bg-slate-50 py-4 px-5 flex items-center text-[15px] font-medium text-slate-800 leading-relaxed">{currentProductData.pack}</div>
-              </div>
+            <div className="border border-slate-200 rounded-lg overflow-hidden shadow-sm overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[400px]">
+                <thead>
+                  <tr className="bg-slate-100/80">
+                    <th className="py-3 px-4 border-b border-slate-200 text-xs text-slate-600 font-bold uppercase tracking-wider">Available Sizes</th>
+                    <th className="py-3 px-4 border-b border-slate-200 text-xs text-slate-600 font-bold uppercase tracking-wider">Specifications</th>
+                    <th className="py-3 px-4 border-b border-slate-200 text-xs text-slate-600 font-bold uppercase tracking-wider">Pcs Per Pack</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white">
+                  {currentProductData.length > 0 ? currentProductData.map((variant, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50 transition-colors">
+                      <td className="py-3 px-4 border-b border-slate-200 text-sm text-slate-800 font-medium">{variant.size}</td>
+                      <td className="py-3 px-4 border-b border-slate-200 text-sm text-slate-800 text-slate-600">{variant.spec}</td>
+                      <td className="py-3 px-4 border-b border-slate-200 text-sm text-slate-800 font-medium whitespace-nowrap">{variant.pack}</td>
+                    </tr>
+                  )) : (
+                    <tr>
+                      <td colSpan={3} className="py-8 text-center text-slate-500 text-sm">No variant data available for this product.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
