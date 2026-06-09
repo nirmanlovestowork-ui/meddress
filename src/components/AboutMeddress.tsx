@@ -25,7 +25,7 @@ export default function AboutMeddress() {
           <div className="lg:col-span-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-sm hover:shadow-md border border-slate-100 transition-all duration-300 relative overflow-hidden flex flex-col justify-center group">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight text-center mb-6 md:mb-8">Our History</h3>
             <p className="text-slate-600 leading-relaxed text-lg lg:text-xl font-light">
-              Founded and managed by seasoned business professionals with over <strong className="text-[#14aebc] font-medium">25 years of global industry experience</strong> including strategic collaborations with TOP Corporation (Japan), Leventon (Spain), and Swaoromed (Austria). Meddress was established to meet the escalating demand for high-quality, safe, and cost-effective surgical disposables, with a core focus on elevating patient care standards and making premium healthcare accessible to all.
+              Established on <strong className="text-[#14aebc] font-medium">23 August 2023</strong>, and founded and managed by seasoned business professionals with over <strong className="text-[#14aebc] font-medium">25 years of global industry experience</strong> including strategic collaborations with TOP Corporation (Japan), Leventon (Spain), and Swaoromed (Austria). Meddress was established to meet the escalating demand for high-quality, safe, and cost-effective surgical disposables, with a core focus on elevating patient care standards and making premium healthcare accessible to all.
             </p>
           </div>
 
