@@ -176,8 +176,7 @@ export default function Products() {
                     </div>
                   </div>
                   <div className="bg-white p-6 border-t border-slate-100 mt-auto">
-                    <h4 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-[#14aebc] transition-colors">{p.name}</h4>
-                    <p className="text-sm text-slate-500">{p.desc}</p>
+                    <h4 className="font-bold text-slate-800 text-lg group-hover:text-[#14aebc] transition-colors">{p.name}</h4>
                   </div>
                 </div>
               ))}
@@ -215,9 +214,7 @@ export default function Products() {
                  </div>
               </div>
               <div className="bg-slate-50 p-6 border-t border-slate-100 mt-auto">
-                <h4 className="font-bold text-slate-800 text-base mb-2">{p.name}</h4>
-                <p className="text-sm text-slate-500">{p.desc}</p>
-                <div className="mt-4 text-xs font-medium text-[#14aebc]">Additional info placeholder...</div>
+                <h4 className="font-bold text-slate-800 text-base">{p.name}</h4>
               </div>
             </div>
           ))}
