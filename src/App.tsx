@@ -7,6 +7,7 @@ import AboutMeddress from './components/AboutMeddress';
 import SuccessFAQ from './components/SuccessFAQ';
 import ContactFooter from './components/ContactFooter';
 import AboutUs from './components/AboutUs';
+import OurTeam from './components/OurTeam';
 import ContactFormModal from './components/ContactFormModal';
 import { useState, useEffect } from 'react';
 
@@ -24,8 +25,10 @@ export default function App() {
     <div className="font-sans text-slate-800 bg-white min-h-screen">
       <TopNav onOpenContact={() => setIsContactModalOpen(true)} />
       <main>
-        {hash === '#about' || hash === '#team' ? (
+        {hash === '#about' ? (
           <AboutUs />
+        ) : hash === '#team' ? (
+          <OurTeam />
         ) : (
           <>
             <Hero />

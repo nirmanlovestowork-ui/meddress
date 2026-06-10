@@ -109,6 +109,89 @@ const productDataListing: Record<string, ProductVariant[]> = {
   ]
 };
 
+const productUsageListing: Record<string, string[]> = {
+  'Roller Bandage': [
+    'Securing wound dressings and pads firmly in place.',
+    'Providing light, adjustable compression to reduce swelling or support joint sprains.',
+    'Acting as a flexible first-aid base layer for orthopedic splints on fractured limbs.'
+  ],
+  'Gauze Than': [
+    'Custom-cutting into specific, non-standard sizes for large wound coverage.',
+    'Used as a primary layer for cleaning, scrubbing, and prepping surgical sites.',
+    'Folding into thick, customized pads to absorb heavy exudate in severe trauma cases.'
+  ],
+  'Gauze Swab': [
+    'Swabbing and cleaning minor cuts, scrapes, and surgical incisions.',
+    'Applying topical ointments, antiseptic creams, and cleaning fluids precisely.',
+    'Packing small, open wounds to absorb drainage and promote safe tissue healing.'
+  ],
+  'Gamjee Roll': [
+    'Padding heavily draining wounds or large, sensitive surgical sites.',
+    'Insulating healing areas to protect them from external mechanical trauma.',
+    'Acting as a high-capacity, highly absorbent secondary layer over primary sterile dressings.'
+  ],
+  'Combined Dressing': [
+    'Managing post-operative surgical wounds that exhibit moderate to heavy bleeding.',
+    'Cushioning bodily pressure points to prevent bedsores or friction ulcers in bedridden patients.',
+    'Functioning as a rapid-response, high-capacity trauma dressing for emergency first aid.'
+  ],
+  'Absorbent Cotton': [
+    'Cleaning delicate skin areas and gently applying cosmetic or medical fluids.',
+    'Serving as a generic, soft padding material for lightweight, everyday bandaging.',
+    'Absorbing minor, localized bleeding during basic medical examinations or procedures.'
+  ],
+  'Zigzag Cotton': [
+    'Tearing easily in precise quantities without unrolling, saving preparation time in busy clinics.',
+    'Prepping and wiping patient skin with alcohol or disinfectants prior to injections.',
+    'Stuffing and padding under casts or orthopedic splints for layered patient comfort.'
+  ],
+  'Non - Absorbent Cotton': [
+    'Plugging test tubes, flasks, and laboratory glassware to prevent airborne contamination.',
+    'Insulating boundaries around wet dressings where a fluid-repellent barrier is required.',
+    'Cushioning delicate items during medical equipment packing and sterilization processes.'
+  ],
+  'Microporous Tape': [
+    'Securing bandages, gauze, and lightweight dressings directly to sensitive or fragile skin.',
+    'Anchoring I.V. lines, catheters, and thin medical tubing safely in place.',
+    'Providing a highly breathable, hypoallergenic hold that allows natural skin moisture to escape.'
+  ],
+  'POP Bandage': [
+    'Casting and completely immobilizing broken bones, fractures, and severe sprains.',
+    'Creating rigid, custom-molded orthopedic splints to correct joint and bone deformities.',
+    'Providing robust, post-operative structural support for reconstructive orthopedic surgeries.'
+  ],
+  'I.V.Cannula Fixator': [
+    'Firmly securing the I.V. cannula to the patient\'s skin to prevent accidental dislodgement.',
+    'Protecting the delicate insertion site from dirt, friction, and potential bacterial infection.',
+    'Minimizing patient discomfort and vein trauma caused by unnecessary cannula movement.'
+  ],
+  'Cast Pad / Soft Roll Cotton': [
+    'Wrapping directly under POP or synthetic casts to prevent severe skin irritation and chafing.',
+    'Absorbing sweat and minor exudate beneath orthopedic casts to maintain skin hygiene.',
+    'Evenly distributing pressure around bony prominences (like ankles and elbows) to avoid friction sores.'
+  ],
+  'K99EL Masks': [
+    'Providing high-efficiency, multi-layer particulate filtration against airborne viruses and bacteria.',
+    'Protecting frontline healthcare workers during high-risk, aerosol-generating medical procedures.',
+    'Filtering industrial dust, severe pollutants, and hazardous medical waste particles.'
+  ],
+  '2 / 3 Ply Masks': [
+    'Acting as a primary barrier against large respiratory droplets, coughs, and sneezes.',
+    'Maintaining essential hygiene protocols in clinical, food service, or general workplace settings.',
+    'Preventing the wearer from accidentally exhaling contaminants into sterile environments or onto patients.'
+  ],
+  'Bouffant Cap / Surgeon\'s Cap': [
+    'Fully containing hair to prevent shedding and contamination in sterile surgical operating rooms.',
+    'Maintaining strict hygienic standards in critical ICU, laboratory, or pharmaceutical environments.',
+    'Protecting the wearer\'s hair from infectious fluids, medical splashes, or hazardous airborne chemicals.'
+  ],
+  'MOP': [
+    'Absorbing massive amounts of blood and bodily fluids rapidly during deep, open surgeries.',
+    'Packing bodily cavities or safely retracting delicate organs during abdominal procedures.',
+    'Wiping and maintaining a clear, dry surgical field to provide the operating surgeon with maximum visibility.'
+  ]
+};
+
 export default function ProductSpecModal({ isOpen, onClose, product }: ProductSpecModalProps) {
   useEffect(() => {
     if (isOpen) {
@@ -125,6 +208,10 @@ export default function ProductSpecModal({ isOpen, onClose, product }: ProductSp
 
   const currentProductData = product && productDataListing[product.name] 
     ? productDataListing[product.name] 
+    : [];
+
+  const currentProductUsage = product && productUsageListing[product.name]
+    ? productUsageListing[product.name]
     : [];
 
   return (
@@ -160,6 +247,17 @@ export default function ProductSpecModal({ isOpen, onClose, product }: ProductSp
 
           {/* Content Section */}
           <div className="px-6 md:px-8 pb-8">
+            {currentProductUsage.length > 0 && (
+              <div className="mb-8">
+                <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider mb-3">Product Usage</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  {currentProductUsage.map((usage, idx) => (
+                    <li key={idx} className="text-sm text-slate-600 leading-relaxed pl-1">{usage}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="border border-slate-200 rounded-lg overflow-hidden shadow-sm overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[400px]">
                 <thead>
